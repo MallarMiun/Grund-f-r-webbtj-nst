@@ -43,7 +43,7 @@ switch($method) {
     case 'PUT':
         //Om inget id är med skickat, skicka felmeddelande
         if(!isset($id)) {
-            http_response_code(510); //Not Extended - Further extensions to the request are required for the server to fulfill it.
+            http_response_code(400); //Bad Request - The server could not understand the request due to invalid syntax.
             $response = array("message" => "No id is sent");
         //Om id är skickad   
         } else {
@@ -55,7 +55,7 @@ switch($method) {
         break;
     case 'DELETE':
         if(!isset($id)) {
-            http_response_code(510);
+            http_response_code(400);
             $response = array("message" => "No id is sent");  
         } else {
             http_response_code(200);
