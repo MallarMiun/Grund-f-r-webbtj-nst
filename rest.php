@@ -67,5 +67,3 @@ switch($method) {
 
 //Skickar svar tillbaka till avsändaren
 echo json_encode($response);
-
-lite text..
