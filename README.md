@@ -1,1 +1,1 @@
-# Grund-f-r-webbtj-nst
+# Grund för en REST baserad webbtjänst
