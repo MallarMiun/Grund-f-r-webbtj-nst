@@ -9,7 +9,7 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
 //Vilka metoder som webbtjänsten accepterar, som standard tillåts bara GET.
-header('Acces-Control-Allow-Methods: GET, PUT, POST, DELETE');
+header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE');
 
 //Vilka headers som är tillåtna vid anrop från klient-sidan, kan bli problem med CORS (Cross-Origin Resource Sharing) utan denna.
 header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Authorization, X-Requested-With');
