@@ -34,7 +34,7 @@ switch($method) {
         break;
     case 'POST':
         //Läser in JSON-data skickad med anropet och omvandlar till ett objekt.
-        $data = json_decode(file_get_contents("php://input"));
+        $data = json_decode(file_get_contents("php://input"), true);
         
         http_response_code(201); //Created
 
@@ -47,7 +47,7 @@ switch($method) {
             $response = array("message" => "No id is sent");
         //Om id är skickad   
         } else {
-            $data = json_decode(file_get_contents("php://input"));
+            $data = json_decode(file_get_contents("php://input"), true);
 
             http_response_code(200);
             $response = array("message" => "Post with id=$id is updated");
